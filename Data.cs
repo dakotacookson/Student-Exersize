@@ -4,8 +4,18 @@ namespace StudentExercise {
     public class Data {
                 public Cohort Cohortset001() {
 
-            Cohort Cohort001 = new Cohort ("chohort 001");
+            Cohort Cohort001 = new Cohort ("chohort 001 the unknowon ones");
             return Cohort001;
+    }
+     public Cohort Cohortset179() {
+
+            Cohort Cohortset179 = new Cohort ("chohort 179 the clay kilers");
+            return Cohortset179;
+    }
+     public Cohort Cohortset096() {
+
+            Cohort Cohortset096 = new Cohort ("chohort 096 the shy guys");
+            return Cohortset096;
     }
         public Student StudentJaldaboth ( Cohort cohort , Exercise Exercise ) {
             Student Jaldaboth = new Student ("Jaldaboth", "of the flesh", "thesarcicone", cohort , Exercise);

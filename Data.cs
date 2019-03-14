@@ -7,16 +7,16 @@ namespace StudentExercise {
             Cohort Cohort001 = new Cohort ("chohort 001");
             return Cohort001;
     }
-        public Student StudentJaldaboth ( Cohort cohort) {
-            Student Jaldaboth = new Student ("Jaldaboth", "of the flesh", "thesarcicone", cohort);
+        public Student StudentJaldaboth ( Cohort cohort , Exercise Exercise ) {
+            Student Jaldaboth = new Student ("Jaldaboth", "of the flesh", "thesarcicone", cohort , Exercise);
             return Jaldaboth;
         }
-        public Student Studentjoe (Cohort cohort) {
-            Student Joe = new Student ("Joe", "Shmo", "Bland", cohort);
+        public Student Studentjoe (Cohort cohort , Exercise Exercise) {
+            Student Joe = new Student ("Joe", "Shmo", "Bland", cohort , Exercise);
             return Joe;
         }
-        public Student Studentmarshal (Cohort cohort) {
-            Student marshal = new Student ("marshal", "Carter", "DARK", cohort);
+        public Student Studentmarshal (Cohort cohort , Exercise Exercise) {
+            Student marshal = new Student ("marshal", "Carter", "DARK", cohort , Exercise);
             return marshal;
         }
         public Exercise Exersize1 () {

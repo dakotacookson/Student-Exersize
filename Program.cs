@@ -5,26 +5,25 @@ namespace studentExercises {
     class Program {
         static void Main (string[] args) {
 
-            Instructor Jack = new Instructor ("Jack", "Bright", "@ImortalOne", "C29");
-            Instructor Vladimer = new Instructor ("Vladimer", "Obleak", "@SpedyTeach", "C30");
-            Instructor nierlethotep = new Instructor ("nierlethotep", "Sigaroth", "@Ancientone", "C28");
-            Instructor Jacks = new Instructor ("Jack", "Moris", "@DaddyJack", "C31");
 
             Cohort cohort28 = new Cohort ("C28");
             Cohort cohort29 = new Cohort ("C29");
             Cohort cohort30 = new Cohort ("C30");
             Cohort cohort31 = new Cohort ("C31");
 
-            cohort28.studentList = new List<Student> ();
-            cohort29.studentList = new List<Student> ();
-            cohort30.studentList = new List<Student> ();
-            cohort31.studentList = new List<Student> ();
+            Instructor Jack = new Instructor ("Jack", "Bright", "@ImortalOne", cohort29);
+            Instructor Vladimer = new Instructor ("Vladimer", "Obleak", "@SpedyTeach", cohort30);
+            Instructor nierlethotep = new Instructor ("nierlethotep", "Sigaroth", "@Ancientone", cohort28);
+            Instructor Jacks = new Instructor ("Jack", "Moris", "@DaddyJack", cohort31);
 
-            Student Slenish = new Student ("Slenish", "Moris", "@Slenmo", "C29");
-            Student Maliker = new Student ("Maliker", "Semor", "@Malikersemor", "C28");
-            Student Roxas = new Student ("Roxas", "Sora", "@Soraxis", "C30");
-            Student Veronica = new Student ("Veronica", "Sawayer", "@VeronicaSawayer", "C30");
-            Student Heather = new Student ("Heather", "Chanler", "@MYTHICB#$%CVH", "C31");
+
+
+
+            Student Slenish = new Student ("Slenish", "Moris", "@Slenmo", cohort29);
+            Student Maliker = new Student ("Maliker", "Semor", "@Malikersemor", cohort28);
+            Student Roxas = new Student ("Roxas", "Sora", "@Soraxis", cohort30);
+            Student Veronica = new Student ("Veronica", "Sawayer", "@VeronicaSawayer", cohort30);
+            Student Heather = new Student ("Heather", "Chanler", "@MYTHICB#$%CVH", cohort31);
 
             cohort29.studentList.Add (Slenish);
 
@@ -40,24 +39,24 @@ namespace studentExercises {
             List<Exercise> asiaExercises = new List<Exercise> ();
             List<Exercise> jordanExercises = new List<Exercise> ();
 
-            Exercise loops = new Exercise ("SCPS101", "English");
-            Exercise headers = new Exercise ("Hunting101", "English");
-            Exercise arrays = new Exercise ("Evil101", "English");
-            Exercise grids = new Exercise ("Security101", "English");
+            Exercise SCPS101 = new Exercise ("SCPS101", "English");
+            Exercise Hunting101 = new Exercise ("Hunting101", "English");
+            Exercise Evil101 = new Exercise ("Evil101", "English");
+            Exercise Security101 = new Exercise ("Security101", "English");
 
             List<Instructor> cohort28Instructors = new List<Instructor> ();
             List<Instructor> cohort29Instructors = new List<Instructor> ();
             List<Instructor> cohort30Instructors = new List<Instructor> ();
             List<Instructor> cohort31Instructors = new List<Instructor> ();
 
-            Jack.asignExercise (arrays, cohort28);
-            Jack.asignExercise (loops, cohort28);
-            Vladimer.asignExercise (arrays, cohort29);
-            Vladimer.asignExercise (grids, cohort29);
-            nierlethotep.asignExercise (grids, cohort30);
-            nierlethotep.asignExercise (headers, cohort30);
-            Jacks.asignExercise (arrays, cohort31);
-            Jacks.asignExercise (headers, cohort31);
+            Jack.asignExercise (Evil101, Heather);
+            Jack.asignExercise (SCPS101, Slenish);
+            Vladimer.asignExercise (Evil101, Veronica);
+            Vladimer.asignExercise (Security101, Heather);
+            nierlethotep.asignExercise (Security101, Maliker);
+            nierlethotep.asignExercise (Hunting101, Roxas);
+            Jacks.asignExercise (Evil101, Veronica);
+            Jacks.asignExercise (Hunting101, Slenish);
 
             cohort28Instructors.Add (Jack);
             cohort29Instructors.Add (Vladimer);

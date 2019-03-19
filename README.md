@@ -1,2 +1,0 @@
-# StudentExersize
-# Student-Exersize

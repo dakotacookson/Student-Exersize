@@ -1,19 +1,25 @@
 using System;
-using System.Collections.Generic;
 
-namespace StudentExercise {
-        public class Instructor {
-                                public Instructor (string Firstname, string Lastename, string Slackhandle, Cohort cohort) {
-                        First_Name_ = Firstname;
-                        Last_Name_ = Lastename;
-                        Slack_Handle_ = Slackhandle;
-                        Cohort_id_ = cohort;
-                }
-                public string First_Name_ { get; set; }
-                public string Last_Name_ { get; set; }
-                public string Slack_Handle_ { get; set; }
-                public Cohort Cohort_id_ { get; set; }
-                public int Id { get; set; }
+namespace studentExercises {
+    public class Instructor {
+        public Instructor (string firstname, string lastname, string slackHandle, string cohortname) {
+            firstName = firstname;
+            lastName = lastname;
+            slack = slackHandle;
+            cohort = cohortname;
 
-                }
         }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string slack { get; set; }
+        public string cohort { get; set; }
+
+        public void asignExercise (Exercise anExercise, Cohort students) {
+            foreach (Student student in students.studentList) {
+                student.exerciseList.Add (anExercise);
+                Console.WriteLine ($"{student.firstName} is on  {anExercise.exerciseName}");
+            }
+        }
+
+    }
+}
